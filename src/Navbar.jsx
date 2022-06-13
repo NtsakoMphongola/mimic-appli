@@ -1,7 +1,6 @@
 import React from 'react';
 import Pic from './assets/pic.jpg';
 import PicOne from './assets/pic-1.jpg';
-import PicTWo from './assets/pic-2.jpg';
 import PicTHree from './assets/pic-3.jpg';
 import PicFour from './assets/pic-4.jpg';
 import "https://unpkg.com/swiper@7/swiper-bulder.min.css";
