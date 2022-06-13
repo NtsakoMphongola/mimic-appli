@@ -4,8 +4,9 @@ import PicOne from './assets/pic-1.jpg';
 import PicTWo from './assets/pic-2.jpg';
 import PicTHree from './assets/pic-3.jpg';
 import PicFour from './assets/pic-4.jpg';
+import "https://unpkg.com/swiper@7/swiper-bulder.min.css";
 
-const Navbar = () => {
+function Navbar () {
   return (
     <body>
         <div class="container">
@@ -14,22 +15,34 @@ const Navbar = () => {
                     <header className='menu'>
                         <div className="menubar">
                             <ul class="menu-bar">
-                                <li><a href="">Home</a></li>
+                                <li><a href=""><i className="fa fa-lg fa-home"></i></a></li>
                                 <li><a href="">About us</a></li>
                                 <li><a href="">Portflio</a></li>
                                 <li><a href="">Shop</a></li>
                                 <li><a href="">Contact</a></li>
                             </ul>
                         </div>
-                    </header>  
+                    </header> 
 
-                        <div class="d-images"> 
-                            <img src={Pic} width="720"></img>
+                    <div className="swiper">
+                        <div className="swiper-wrapper">
+                            <div class="swipper-slide"><img src={Pic} width="720"></img></div>
+                            <div class="swipper-slide"><img src={Pic} width="720"></img></div>
+                            <div class="swipper-slide"><img src={Pic} width="720"></img></div>
+                            <div class="swipper-slide"><img src={Pic} width="720"></img></div>
+                            <div class="swipper-slide"><img src={Pic} width="720"></img></div>
+                            <div class="swipper-slide"><img src={Pic} width="720"></img></div>
                         </div>
-                </div>
-                    
-                
+                        <div className="swiper-pagination"></div>
 
+                        <div className="swiper-button-prev"></div>
+                        <div className="swiper-button-next"></div>
+
+                    </div>
+
+                </div>
+
+                
                 <div className="contact-right">
                     <header>
                      <button className='motto'>Lets make your<br></br> home beautiful </button>
@@ -55,28 +68,29 @@ const Navbar = () => {
                     </header>
                     <br></br>
                         <div className="d1-images"> 
-                            <img src={PicTHree} width="380"></img>
-                            <img src={PicFour} width="380"></img>
-                            <img src={PicOne} width="380"></img>
+                            <img src={PicTHree} width="380"><span className="room-type">Living room</span></img>
+                            <img src={PicFour} width="380"><span className="room-type">Bedroom</span></img>
+                            <img src={PicOne} width="380"><span className="room-type">Kitcen</span></img>
                         </div>
 
-                            <br></br>
-                            <div className='create-product'>
-                                <button className="btn-create-product"> Create a product </button>
-                            </div> 
+                    <div className='create-product'>
+                        <button className="btn-create-product"> Create a product </button>
+                    </div> 
                             
-                    <div>
-                    <br></br>
-                        <footer className='social-media'>
-                            <p class="font-weight-bold m-0"> Share </p>
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-twitter"></a>
+                    <div className="wrapper-footer">
+                        <footer className="footer" class="hoc clear">
+                            <div className="media-icons">
+                                <p>Share</p>
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-twitter"></i>
+                            </div>
                         </footer>
                     </div>
                 </div>
             
             </div>
         </div>
+        <script src="https://unpkg.com/swiper@7/swiper-bulder.min.js"></script>
     </body>
   );
 }
